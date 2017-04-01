@@ -10,6 +10,13 @@ echo "Innobackupex env file ${EnvDir}/innobackupex.env not found"
 exit 1
 fi
 
+#Check user running this script
+user=`id | sed -e 's/^uid=[0-9]*(\([^)]*\)).*$/\1/'`
+if [ "$user" != "mysql" ]; then
+   echo "Run as mysql. You are \"$user\"";
+   exit 1
+fi
+
 source ${EnvDir}/innobackupex.env
 
 #Check variables
