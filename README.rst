@@ -8,7 +8,9 @@ Syntax
 
 ::
 
- Usage: innobackupex.sh
+ Usage: 
+ Full backup - innobackupex.sh
+ Incremental backup (cumulative) - innobackupex.sh --incr
 
 Set following variables in *innobackupex.env* file
 
