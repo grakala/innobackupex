@@ -14,6 +14,8 @@ Syntax
  Full backup - innobackupex.sh
  Incremental backup (cumulative) - innobackupex.sh --incr
 
+Set *EnvDir* with the location of environment file in innobackupex.sh script.
+
 Set following variables in *innobackupex.env* file
 
 ::
