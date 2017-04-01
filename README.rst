@@ -1,7 +1,8 @@
 innobackupex.sh
 ===============
 
-``innobackupex.sh`` - Mysql full and incremental backup script using innobackupex.
+``innobackupex.sh`` - Mysql full and incremental backup script using innobackupex. Script verifies if atleast one full backup exists in the backup directory when running incremental backup. 
+Incremental backup takes last full backup as incremental-basedir.
 
 Syntax
 ======
