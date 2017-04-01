@@ -33,8 +33,7 @@ Set following variables in *innobackupex.env* file
  StatsPassword - Password for above mentioned db user
  StatsTable - table name to store DB backup stats, DDL provided below.
  
-StatsTable DDL :
-----------------
+**StatsTable DDL :**
 
 ::
 
