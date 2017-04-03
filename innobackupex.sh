@@ -85,7 +85,7 @@ done
 
 full()
 {
-BackupFullCommand="${InnobackupBinary} --no-timestamp --slave-info --user=${User} --password=${Password} --defaults-file=${DefaultsFile} ${FullDir}"
+BackupFullCommand="${InnobackupBinary} --no-timestamp --slave-info --user=${User} --password=${Password} --defaults-file=${DefaultsFile} --compress ${FullDir}"
 $BackupFullCommand > $FullLog 2>&1
 if [ -z "`tail -1 ${FullLog}|grep 'completed OK!'`" ]; then
 #Backup failed, save the log file
