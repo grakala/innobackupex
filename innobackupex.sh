@@ -104,7 +104,7 @@ exit 1
 fi
 # Get last full backup dir
 IncrBaseDir=${BackupDir}/`ls -lrth ${BackupDir} | grep 'FULL' | tail -1 | awk {'print $NF'}`
-BackupIncrCommand="${InnobackupBinary} --no-timestamp --slave-info --user=${User} --password=${Password} --defaults-file=${DefaultsFile} --incremental $IncrDir --incremental-basedir=$IncrBaseDir"
+BackupIncrCommand="${InnobackupBinary} --no-timestamp --slave-info --user=${User} --password=${Password} --defaults-file=${DefaultsFile} --compress --incremental $IncrDir --incremental-basedir=$IncrBaseDir"
 $BackupIncrCommand > $IncrLog 2>&1
 if [ -z "`tail -1 ${IncrLog}|grep 'completed OK!'`" ]; then
 #Backup failed, save the log file
